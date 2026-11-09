@@ -8,15 +8,55 @@ export interface ImageSlot {
   id: string;
   primary: string;
   fallback: string;
+  mobile?: string;
   alt: string;
   dishName: string;
 }
 
 export const IMAGES: Record<string, ImageSlot> = {
+  // Hero Slider Slides (Root-relative paths)
+  heroSlide1: {
+    id: 'heroSlide1',
+    primary: '/images/hero/room.jpg',
+    mobile: '/images/hero/room-mobile.jpg',
+    fallback: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80',
+    alt: 'Kusina De Isobel green room with mint walls, pendant lights, checkerboard floor and glowing neon sign',
+    dishName: 'The Green Room',
+  },
+  heroSlide2: {
+    id: 'heroSlide2',
+    primary: '/images/hero/eggs.jpg',
+    mobile: '/images/hero/eggs-mobile.jpg',
+    fallback: 'https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=900&q=75',
+    alt: 'Avocado and poached eggs on toasted sourdough with seasoning',
+    dishName: 'Avocado & Poached Eggs on Toast',
+  },
+  heroSlide3: {
+    id: 'heroSlide3',
+    primary: '/images/hero/breakfast.jpg',
+    fallback: 'https://images.unsplash.com/photo-1533089860892-a7c6f0a88666?auto=format&fit=crop&w=900&q=75',
+    alt: 'The Full English breakfast plate with grilled sourdough, eggs, bacon, sausage, beans and mushrooms',
+    dishName: 'The Full English with Sourdough',
+  },
+  heroSlide4: {
+    id: 'heroSlide4',
+    primary: '/images/hero/sharing.jpg',
+    fallback: 'https://images.unsplash.com/photo-1555939594-58d7cb561ad1?auto=format&fit=crop&w=900&q=75',
+    alt: 'Kusina De Isobel feast table with signature sharing platter of grilled meats, fries and salads',
+    dishName: 'Sharing Platter for 2',
+  },
+  heroSlide5: {
+    id: 'heroSlide5',
+    primary: '/images/hero/coffee.jpg',
+    fallback: 'https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=900&q=75',
+    alt: 'Artisan caffe lattes with cocoa dusted stripes on dark cafe tables',
+    dishName: 'Classic Cafe Latte',
+  },
+
   // Hero & Ambience
   heroInterior: {
     id: 'heroInterior',
-    primary: '/assets/aistudio/unnamed__31__a333adea.jpg',
+    primary: '/images/hero/room.jpg',
     fallback: 'https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1200&q=80',
     alt: 'Warm mint green cafe interior at Kusina De Isobel with glowing neon sign, brass lighting, and checkerboard floor',
     dishName: 'Kusina De Isobel Cafe Interior',
