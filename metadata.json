@@ -1,0 +1,6 @@
+{
+  "name": "Kusina De Isobel - Cafe & Comfort Food",
+  "description": "Your cozy neighbourhood cafe on Baker Street, Weybridge. Breakfast, brunch, specialty coffee, and evening grill favourites.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

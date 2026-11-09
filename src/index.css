@@ -1,0 +1,152 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-bottle-green: #0E3B2E;
+    --color-chalkboard: #121A16;
+    --color-mint: #8FCFB0;
+    --color-cream: #F7F1E3;
+    --color-tan: #A9794E;
+    --color-neon-lime: #D8F26A;
+    --color-berry: #9E1F2C;
+
+    --font-heading: 'Gloock', Georgia, serif;
+    --font-body: 'Figtree', system-ui, -apple-system, sans-serif;
+    --font-neon: 'Yellowtail', cursive;
+
+    --gradient-brass: linear-gradient(135deg, #F6DC8E 0%, #D9A441 50%, #A8701F 100%);
+    --gradient-wall: linear-gradient(180deg, #A8E6C4 0%, #3FA07A 50%, #0E3B2E 100%);
+  }
+
+  body {
+    font-family: var(--font-body);
+    background-color: var(--color-bottle-green);
+    color: var(--color-cream);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: var(--font-heading);
+  }
+
+  .font-neon {
+    font-family: var(--font-neon);
+  }
+}
+
+/* Neon glow signature */
+.neon-glow {
+  color: #D8F26A;
+  text-shadow:
+    0 0 2px #fff,
+    0 0 6px #D8F26A,
+    0 0 15px rgba(216, 242, 106, 0.75),
+    0 0 30px rgba(216, 242, 106, 0.4);
+}
+
+@keyframes neon-flicker {
+  0%, 19.999%, 22%, 62.999%, 64%, 64.999%, 70%, 100% {
+    opacity: 1;
+    filter: drop-shadow(0 0 10px rgba(216, 242, 106, 0.8));
+  }
+  20%, 21.999%, 63%, 63.999%, 65%, 69.999% {
+    opacity: 0.6;
+    filter: drop-shadow(0 0 3px rgba(216, 242, 106, 0.3));
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .neon-flicker {
+    animation: neon-flicker 4.5s infinite;
+  }
+  .neon-flicker-once {
+    animation: neon-flicker 1.8s ease-in-out 1;
+  }
+}
+
+/* Brass Gradient Utility */
+.bg-brass-gradient {
+  background: linear-gradient(135deg, #F6DC8E 0%, #D9A441 50%, #A8701F 100%);
+}
+
+.text-brass-gradient {
+  background: linear-gradient(135deg, #F6DC8E 0%, #D9A441 60%, #A8701F 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.border-brass {
+  border-color: #D9A441;
+}
+
+/* Chalkboard Texture */
+.chalkboard-surface {
+  background-color: #121A16;
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 0),
+    radial-gradient(rgba(217, 164, 65, 0.02) 1px, transparent 0);
+  background-size: 24px 24px, 48px 48px;
+  background-position: 0 0, 12px 12px;
+}
+
+/* Checkerboard Floor Strip */
+.checkerboard-strip {
+  height: 10px;
+  background-image:
+    linear-gradient(45deg, #CBD5E1 25%, transparent 25%),
+    linear-gradient(-45deg, #CBD5E1 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #CBD5E1 75%),
+    linear-gradient(-45deg, transparent 75%, #CBD5E1 75%);
+  background-size: 14px 14px;
+  background-position: 0 0, 0 7px, 7px -7px, -7px 0px;
+  background-color: #F8FAFC;
+  opacity: 0.85;
+}
+
+.checkerboard-strip-dark {
+  height: 12px;
+  background-image:
+    linear-gradient(45deg, #334155 25%, transparent 25%),
+    linear-gradient(-45deg, #334155 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #334155 75%),
+    linear-gradient(-45deg, transparent 75%, #334155 75%);
+  background-size: 14px 14px;
+  background-position: 0 0, 0 7px, 7px -7px, -7px 0px;
+  background-color: #0F172A;
+  opacity: 0.9;
+}
+
+/* Wall Gradient Panel */
+.wall-gradient-panel {
+  background: linear-gradient(135deg, rgba(168, 230, 196, 0.15) 0%, rgba(63, 160, 122, 0.25) 50%, rgba(14, 59, 46, 0.95) 100%), #0E3B2E;
+}
+
+/* Pendant Lamp Glow Effect */
+.pendant-glow {
+  background: radial-gradient(circle, rgba(246, 220, 142, 0.35) 0%, rgba(217, 164, 65, 0.12) 40%, transparent 70%);
+}
+
+/* Glass Floating Navbar */
+.glass-nav {
+  background: rgba(14, 59, 46, 0.82);
+  backdrop-filter: blur(14px) saturate(160%);
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  border: 1px solid rgba(217, 164, 65, 0.28);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.45);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0E3B2E;
+}
+::-webkit-scrollbar-thumb {
+  background: #255848;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D9A441;
+}
